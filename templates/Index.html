@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patil Agrotech</title>
+    <title>Agritech Innovators</title>
     <link rel="stylesheet" href="{{url_for('static',filename='style/first.css')}}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruslan+Display&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        text-decoration: none;
+      }
+      form{
+        height: 90vh;
+        margin-top: 5vh;
+      
+      }
+      input{
+        padding: 10px 15px;
+        font-family: poppins;
+      }
+    </style>
 </head>
 <body>
     <form action="form" method="post">
-  <label for="Nitrogen">Nirogen:</label>
-  <input type="text" id="Nirogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
+  <input type="text" id="Nirogen" name="Nitrogen" min="0" max="100" placeholder="Enter Nitrogen level" required>
 
-  <label for="Phosphorus">Phosphorus:</label>
-  <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
+  <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Enter Phosphorus level" required>
 
-  <label for="Potassium">Potassium:</label>
-  <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
+  <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Enter Potassium level" required>
 
-  <label for="Temperature">Temperature:</label>
-  <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature in Degree Celcius" required>
+  
+  <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Enter Temperature in Degree Celcius" required>
 
-  <label for="Humidity">Humidity:</label>
-  <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity in Percentage" required>
+  <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Enter Relative Humidity in Percentage" required>
 
-  <label for="ph">ph:</label>
+
   <input type="text" id="ph" name="ph" min="0" max="14" placeholder="ph should be in between 0-14" required>
 
-  <label for="Rainfall">Rainfall:</label>
-  <input type="text" id="Rainfall" name="Rainfall" placeholder="Rainfall in MM" required min="0" max="10000">
+  <input type="text" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall in MM" required min="0" max="10000">
 
   <input type="submit" id="submit" name="submit" value="Predict Your Crop">
 </form>

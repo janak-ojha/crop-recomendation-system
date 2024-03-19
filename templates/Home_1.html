@@ -2,34 +2,82 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Patil Agrotech</title>
+    <title>Agritech Innovators</title>
+    
     <link rel="stylesheet" href="{{url_for('static',filename='style/myhome.css')}}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruslan+Display&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        text-decoration: none;
+      }
+      nav{
+        height: 10vh;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav ul{
+        display: flex;
+      }
+      nav ul li{
+        font-family: poppins;
+      }
+      main{
+        background-color: rgba(255, 255, 255, 0.29);
+        padding: 5%;
+        backdrop-filter: blur(5px);
+        width: 80%;
+        margin: auto;
+        margin-top: 5vh !important;
+        border-radius: 20px;
+      }
+      main p{
+        color: black;
+      }
+      main h1{
+        font-size: 35px;
+        font-family: Ruslan Display;
+      }
+      main p{
+        font-family: poppins;
+        line-height: 20px;
+        font-size: 15px;
+      }
+      button{
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>Team Aditya Pandey</li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Patil Agrotech</h1>
-      <p style="color: black;">Patil Agrotech Welcomes you on our website, Hope you are earning well from your farm 
+      <h1>Agritech Innovators</h1>
+      <p> Agritech Innovators welcomes you on our website, Hope you are earning well from your farm 
         but we are here for you to provide some suggetions about your crop cultivation 
       We recommends you to which crop you should grow in your farm for better yields. Its 
       very easy to predict which crop you should grow on the basis of your soil nutrients 
       just you need to know your soil nutrients for this you can test your soil in lab.</p>
       <br>
-      <h3 style="color: black;">Let's Start New Journey With Patil Agrotech</h3>
-      <br>
-      <h2 style="color: black;">Click following button for Crop recommandation</h2>
+      <form action="/Predict">
+        <button type="submit" id="Predict" name="Predict" action="/Predict" value=" ">Let's Get Started</button>
+       </form>
     </main>
-     <form action="/Predict">
-      <input type="submit" id="Predict" name="Predict" action="/Predict" value="Predict">
-     </form>
+     
   </body>
 </html>
